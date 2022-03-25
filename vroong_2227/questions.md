@@ -22,12 +22,10 @@
  </br>
 
  **Parameter**
-
  `findSubstrings` has the following parameter:
-   - string `s`: the given string
- 
+    - string `s`: the given string
  **Returns**:
-   - int: the number of substrings in `s` that have no repeating characters
+    - int: the number of substrings in `s` that have no repeating characters
     (s에 존재하는 중복 문자를 포함하지 않는 substring의 개수)
 
 </br>
@@ -69,7 +67,7 @@
 <p align='center'><img width="400" alt="vroong_q1" src="https://imgur.com/glWFS8O.png"></p>
  차가 포함되는 도로의 부분은 회색으로 표시가 되어있고, 그렇지 않은 부분은 초록색으로 표시되어 있습니다.
  위의 그림은 길이가 n=10단위이고 차량이 m=4대인 도로를 표시합니다.
-
+ 
  - 첫 번째 차량의 위치는 start[0]=1에서 finish[0]=2입니다 (총 2칸).
  - 두 번째 차량의 위치는 start[1]=2에서 finish[1]=2입니다 (총 1칸).
  - 세 번째 차량의 위치는 start[2]=5에서 finish[2]=6입니다 (총 2칸).
@@ -80,16 +78,17 @@
 
 ### 함수 설명
  Complete the function `widestGap` in the editor below.
-
  **Parameter**
-
  `widestGap` has the following parameter:
 
    - int `n`: the length of the road section (도로의 길이)
+
    - int start`[m]`: the position of the rears of each car (각 차의 시작점 - 정수 배열)
+    
    - int finish`[m]`: the positions of the fronts of each car (각 차의 끝 점 - 정수 배열)
- 
+
  **Returns**:
+   
    - int: the length of the longest gap between cars
     (차 사이의 가장 넓은 간격)
 
@@ -98,7 +97,7 @@
 ### 제한사항
 - 도로의 길이 n은 1이상 1000000000이하
 - 시작점과 끝 점 m은 1이상 100000이하
-- start[i]는 항상 1이상, finish[i]보다 작으며, finish[i]는 항상 도로의 길이보다 작고, i는 0이상 차랑의 대수 미만임.
+- start[i]는 항상 1이상, finish[i]보다 작으며, finish[i]는 항상 도로의 길이 이하이다 (인덱스 i는 0이상 차랑의 대수 미만임).
 
 </br>
 
@@ -107,3 +106,4 @@
 |n|start|finish|result|
 |:---:|:---:|:---:|:---:|
 |10|[3,8]|[4,9]|3|
+|10|[1,2,5,8]|[2,2,6,10]|2|
