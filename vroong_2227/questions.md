@@ -22,10 +22,12 @@
  </br>
 
  **Parameter**
+
  `findSubstrings` has the following parameter:
-    - string `s`: the given string
+   - string `s`: the given string
+ 
  **Returns**:
-    - int: the number of substrings in `s` that have no repeating characters
+   - int: the number of substrings in `s` that have no repeating characters
     (s에 존재하는 중복 문자를 포함하지 않는 substring의 개수)
 
 </br>
@@ -39,7 +41,7 @@
 ### 입출력 예
 
 |s|result|
-|:===:|:===:|
+|:---:|:---:|
 |"bcada"|12|
 |"abcd"|10|
 
@@ -67,6 +69,7 @@
 <p align='center'><img width="400" alt="vroong_q1" src="https://imgur.com/glWFS8O.png"></p>
  차가 포함되는 도로의 부분은 회색으로 표시가 되어있고, 그렇지 않은 부분은 초록색으로 표시되어 있습니다.
  위의 그림은 길이가 n=10단위이고 차량이 m=4대인 도로를 표시합니다.
+
  - 첫 번째 차량의 위치는 start[0]=1에서 finish[0]=2입니다 (총 2칸).
  - 두 번째 차량의 위치는 start[1]=2에서 finish[1]=2입니다 (총 1칸).
  - 세 번째 차량의 위치는 start[2]=5에서 finish[2]=6입니다 (총 2칸).
@@ -77,13 +80,17 @@
 
 ### 함수 설명
  Complete the function `widestGap` in the editor below.
+
  **Parameter**
+
  `widestGap` has the following parameter:
-    - int `n`: the length of the road section (도로의 길이)
-    - int start`[m]`: the position of the rears of each car (각 차의 시작점 - 정수 배열)
-    - int finish`[m]`: the positions of the fronts of each car (각 차의 끝 점 - 정수 배열)
+
+   - int `n`: the length of the road section (도로의 길이)
+   - int start`[m]`: the position of the rears of each car (각 차의 시작점 - 정수 배열)
+   - int finish`[m]`: the positions of the fronts of each car (각 차의 끝 점 - 정수 배열)
+ 
  **Returns**:
-    - int: the length of the longest gap between cars
+   - int: the length of the longest gap between cars
     (차 사이의 가장 넓은 간격)
 
 </br>
@@ -98,5 +105,5 @@
 ### 입출력 예
 
 |n|start|finish|result|
-|:===:|:===:|:===:|:===:|
+|:---:|:---:|:---:|:---:|
 |10|[3,8]|[4,9]|3|
