@@ -10,7 +10,7 @@ def findSubstrings(s):
     return cnt
 
 if __name__ == "__main__":
-    print(findSubstrings("bcada"))
-    print(findSubstrings("abcd"))
+    assert findSubstrings("bcada") == 12
+    assert findSubstrings("abcd") == 10
 
 #문제풀이 소요시간 31분
