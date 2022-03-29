@@ -22,9 +22,8 @@
  </br>
 
  **Parameter**
- `findSubstrings` has the following parameter:
   - string `s`: the given string
- **Returns**:
+ **Returns**
    - int: the number of substrings in `s` that have no repeating characters
     (s에 존재하는 중복 문자를 포함하지 않는 substring의 개수)
 
@@ -108,7 +107,7 @@
 
  **Parameter**
     - array `px`: an array of int (stock prices)
- **Returns**:
+ **Returns**
     - int: the maximum difference between two prices as decribed above
     
 </br>
@@ -164,7 +163,6 @@
 ### 함수 설명
  Complete the function `widestGap` in the editor below.
  **Parameter**
- `widestGap` has the following parameter:
 
    - int `n`: the length of the road section (도로의 길이)
 
@@ -172,7 +170,7 @@
     
    - int finish`[m]`: the positions of the fronts of each car (각 차의 끝 점 - 정수 배열)
 
- **Returns**:
+ **Returns**
    
    - int: the length of the longest gap between cars
     (차 사이의 가장 넓은 간격)

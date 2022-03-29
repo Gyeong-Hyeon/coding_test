@@ -45,7 +45,7 @@
 - list `legnths`: array of int(the lengths of the segments, in order)
 - int `minLength`: the minimum length the machine can accept
 
-**Returns**:
+**Returns**
 - string: 절단 횟수인 n을 기준으로 n-1회의 절단이 모두 가능하면 "Possible"을, 아니면 "Impossible"을 반환하세요.
 
 </br>
