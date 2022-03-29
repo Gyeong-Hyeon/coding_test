@@ -1,47 +1,71 @@
 ## Question 1. Cut them all
  
- 막대기를 부분으로 자르는 자동 절단기가 있습니다. 이 절단기는 minLength길이 이상의 막대기만 잡을 수 있습니다. 
+ 막대기를 부분으로 자르는 자동 절단기가 있습니다. 이 절단기는 minLength길이 이상의 막대기만 잡을 수 있습니다. 막대기는 잘라야하는 길이만큼 표시되어 있고, 해당 길이는 표시되어 있는 순서대로 array로 주어집니다. minLength길이를 기준으로 마지막 절단이 가능한지를 판단하여 이 절단 계획이 가능한 계획인지 아닌지를 확인하세요.
 
 </br>
 
-### 예시
+### 예시 1.
 
 </br>
 
- **`s = "abac"`**
+ ```
+ n = 3
+ lengths = [4,3,2]
+ minLength = 7
+ ```
 
 </br>
 
- 예시 s에서 반복되지 않는 substring은 "a", "b", "a", "c", "ab", "ba", "ac", "bac"입니다. "aba"와 "abac"는 'a'를 중복으로 포함하므로 substring으로 간주할 수 없습니다. 또한 "a"와 "a"는 문자열 s에서 인덱스 0과 2 두 개로 나눠질 수 있으므로 각각 다른 substring으로 취급할 수 있습니다. 따라서 위의 예시 s에서는 총 8개의 중복 문자를 포함하지 않는 substring이 존재합니다.
+ 처음 막대기의 길이는 `4+3+2=9`unit입니다. 첫번째 절단은 `4+3=7`unit을 잘라서 `9-7=2`길이를 남김으로써 가능합니다. 두 번째 절단은 처음으로 절단한 7unit을 절단기가 잡을 수 있는지 확인함으로써 가능한지 아닌지 판단합니다. 7unit은 절단기가 잡을 수 있는 최소 길이인 `minLength=7`길이와 같으므로 최종 절단이 가능합니다. 따라서 Return 값은 "Possible"입니다.
+
+</br>
+
+### 예시 2.
+
+</br>
+
+ ```
+ n = 3
+ lengths = [4,2,3]
+ minLength = 7
+ ```
+
+</br>
+
+ 처음 막대기의 길이는 `4+3+2=9`unit입니다. 첫번째 절단은 `4`unit또는 `4+2=6`unit이 가능합니다. 둘 중 어떤 길이로 절단하든 남은 길이가 `5`또는 `6`으로 절단기가 잡을 수 있는 최소 길이인 `minLength=7`길이보다 짧습니다. n-1인 2회의 절단이 이루어질 수 없으므로 Return 값은 "Impossible"입니다.
 
 </br>
 
 ### 함수 설명
- Complete the function `findSubstrings` in the editor below.
+ Complete the function `cutThemAll` in the editor below.
 
  </br>
 
- **Parameter**
- `findSubstrings` has the following parameter:
-    - string `s`: the given string
- **Returns**:
-    - int: the number of substrings in `s` that have no repeating characters
-    (s에 존재하는 중복 문자를 포함하지 않는 substring의 개수)
+**Parameter**
+- list `legnths`: array of int(the lengths of the segments, in order)
+- int `minLength`: the minimum length the machine can accept
+
+**Returns**:
+- string: 절단 횟수인 n을 기준으로 n-1회의 절단이 모두 가능하면 "Possible"을, 아니면 "Impossible"을 반환하세요.
 
 </br>
 
 ### 제한사항
-- s의 길이는 1이상 100000 이하
-- s는 소문자로 된 아스키 영문자만 포함합니다. ['a'-'z']
+- lengths의 길이는 2이상 100000이하입니다.
+- t의 길이는 1이상 1000000000이하입니다 (t가 뭐임..?)
+- 절단 길이인 lengths[i]의 길이는 1이상 1000000000이하입니다.
+- lengths의 모든 요소의 합은 잘리지않은 막대기의 길이와 같습니다.
 
 </br>
 
 ### 입출력 예
 
-|s|result|
-|:---:|:---:|
-|"bcada"|12|
-|"abcd"|10|
+|n|minLength|result|
+|:---:|:---:|:---:|
+|[3,5,4,3]|9|"Possible"|
+|[5,6,2]|12|"Impossible"|
+|[4,3,2]|3|"Possible"|
+|[4,2,3]|3|"Impossible"|
 
 </br>
 

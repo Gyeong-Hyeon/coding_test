@@ -23,9 +23,9 @@
 
  **Parameter**
  `findSubstrings` has the following parameter:
-    - string `s`: the given string
+  - string `s`: the given string
  **Returns**:
-    - int: the number of substrings in `s` that have no repeating characters
+   - int: the number of substrings in `s` that have no repeating characters
     (s에 존재하는 중복 문자를 포함하지 않는 substring의 개수)
 
 </br>
@@ -69,7 +69,7 @@
   - `5-1 = 4`
  - 결국 전체 데이터 `px`에서 가장 큰 차이는 `1,3,4,` 중 `4`입니다.
 
-### 예시 1
+### 예시 2
 
 </br>
 
