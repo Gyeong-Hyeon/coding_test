@@ -23,6 +23,7 @@
 
  **Parameter**
   - string `s`: the given string
+  
  **Returns**
    - int: the number of substrings in `s` that have no repeating characters
     (s에 존재하는 중복 문자를 포함하지 않는 substring의 개수)
@@ -89,6 +90,7 @@
 
  **Parameter**
   - array `px`: an array of int (stock prices)
+
  **Returns**
   - int: the maximum difference between two prices as decribed above
     
