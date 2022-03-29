@@ -88,15 +88,15 @@
  </br>
 
  **Parameter**
-    - array `px`: an array of int (stock prices)
+  - array `px`: an array of int (stock prices)
  **Returns**
-    - int: the maximum difference between two prices as decribed above
+  - int: the maximum difference between two prices as decribed above
     
 </br>
 
 ### 제한사항
-- px의 길이 n은 1이상 100000 이하
-- 주식의 가격(종가) px[i]는 -100000이상 100000이하
+ - px의 길이 n은 1이상 100000 이하
+ - 주식의 가격(종가) px[i]는 -100000이상 100000이하
 
 </br>
 
