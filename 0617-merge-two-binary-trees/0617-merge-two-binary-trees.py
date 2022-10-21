@@ -6,22 +6,20 @@
 #         self.right = right
 class Solution:
     def mergeTrees(self, root1: Optional[TreeNode], root2: Optional[TreeNode]) -> Optional[TreeNode]:
-        if not root1:
-            return root2
-        elif not root2:
-            return root1
-        s = [(root1,root2)]
+        if not root1 or not root2:
+            return root2 or root1
+        s = [(root1, root2)]
         while s:
-            n1, n2 = s.pop()
-            if not n2:
+            r1, r2 = s.pop()
+            if not r2:
                 continue
-            n1.val+=n2.val
-            if not n1.right:
-                n1.right = n2.right
-            else:
-                s.append((n1.right, n2.right))
-            if not n1.left:
-                n1.left = n2.left
-            else:
-                s.append((n1.left, n2.left))
-        return root1
+            r1.val+= r2.val
+            if r1.left:
+                s.append((r1.left,r2.left))
+            if r1.right:
+                s.append((r1.right,r2.right))
+            if not r1.left:
+                r1.left = r2.left
+            if not r1.right:
+                r1.right = r2.right
+        return root1   
