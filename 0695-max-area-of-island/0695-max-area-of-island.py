@@ -1,12 +1,13 @@
 class Solution:
     def maxAreaOfIsland(self, grid: List[List[int]]) -> int:
-        ans, n, m = 0, len(grid), len(grid[0])
-        def trav(i: int, j: int) -> int:
-            if i < 0 or j < 0 or i >= n or j >= m or grid[i][j] == 0:
+        ans = 0
+        def trav(vr, vc):
+            if vr < 0 or vc < 0 or vr == len(grid) or vc == len(grid[0]) or grid[vr][vc] == 0:
                 return 0
-            grid[i][j] = 0
-            return 1 + trav(i-1, j) + trav(i, j-1) + trav(i+1, j) + trav(i, j+1)
-        for i, j in product(range(n), range(m)):
-            if grid[i][j]:
-                ans = max(ans, trav(i, j))
+            grid[vr][vc] = 0
+            return 1 + trav(vr-1, vc) + trav(vr+1, vc) + trav(vr, vc-1) + trav(vr, vc+1)
+        for r in range(len(grid)):
+            for c in range(len(grid[0])):
+                if grid[r][c]:
+                    ans = max(ans, trav(r,c))
         return ans
