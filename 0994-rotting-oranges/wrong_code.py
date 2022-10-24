@@ -42,5 +42,5 @@ def orangesRotting(grid) -> int:
     return m
   
   if __name__ == "__main__":
-    assert orangeRotting([[2,1,1],[0,1,1],[1,0,1]]) == 4 #-1
+    assert orangeRotting([[2,1,1],[0,1,1],[1,0,1]]) == -1 #-1나와야되는데 4나옴
   
