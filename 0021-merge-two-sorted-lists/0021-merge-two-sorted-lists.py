@@ -7,11 +7,14 @@ class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
         if not list1 or not list2:
             return list2 or list1
-        node1, node2 = (list1, list2) if list1.val < list2.val else (list2, list1)
-        head = node1
-        while node1 and node2:
-            while node1.next and node1.next.val < node2.val:
-                node1 = node1.next
-            node1.next, node2 = node2, node1.next
-            node1 = node1.next
-        return head
+        ans = move = ListNode()
+        while list1 and list2:
+            if list1.val < list2.val:
+                move.next = list1
+                move, list1 = list1, list1.next
+                continue
+            move.next = list2
+            move, list2 = move.next, list2.next
+        if list1 or list2:
+            move.next = list1 if list1 else list2
+        return ans.next
