@@ -1,19 +1,17 @@
 class Solution:
     def searchInsert(self, nums: List[int], target: int) -> int:
-        max_idx = len(nums)
-        min_idx = 0
-        while True:
-            mid_idx = int((max_idx+min_idx)/2)
-            if nums[mid_idx] == target:
-                return mid_idx
-            if max_idx - min_idx <= 1:
-                if nums[min_idx] > target:
-                    return min_idx
-                else:
-                    return max_idx
-            elif nums[mid_idx] < target:
-                min_idx = mid_idx
-                continue
+        """
+        1. Set the search array same with the input array
+        2. If the middle value is same with target, return the indext of the middle value
+        3. If the target is not found until the search array == False, return high+1
+        """
+        low, high = 0, len(nums)-1
+        while low <= high:
+            mid = (low+high)//2
+            if nums[mid] == target:
+                return mid
+            if nums[mid] > target:
+                high = mid-1
             else:
-                max_idx = mid_idx
-        
+                low = mid+1
+        return low
