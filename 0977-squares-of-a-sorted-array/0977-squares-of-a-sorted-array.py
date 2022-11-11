@@ -13,17 +13,18 @@ class Solution:
             - Else, put the squre of right in the new array[idx] and right -1
             - idx-1
          3. Repeat 2 until idx == 0. If idx == -1, return the new array.
+         
+         Optimize SC - We can replace idx to right-left because anyway those move 1 at one step
         """
-        ans, left, right, idx = [0]*len(nums), 0, len(nums)-1, len(nums)-1
+        ans, left, right = [0]*len(nums), 0, len(nums)-1
         left_val, right_val = nums[left]**2, nums[right]**2
-        while idx >= 0:
+        while left <= right:
             if left_val > right_val:
-                ans[idx] = left_val
+                ans[right-left] = left_val
                 left+=1
                 left_val = nums[left] **2
             else:
-                ans[idx] = right_val
+                ans[right-left] = right_val
                 right-=1
                 right_val = nums[right]**2
-            idx-=1
         return ans
