@@ -4,15 +4,14 @@ class Solution:
         1. Set the search array same with the input array
         2. If the middle value is same with target, return the index of the middle value
         3. If the target is not found until low gets bigger than high, return low
-        While statement continues to narrow down the searching array untill the array is either:
-            Case 1. 2 values in the searching array:
-                - "high" is pointing the last index of searching array
-                - "low" and "mid" is pointing the first index of searching array
-            Case 2. 1 value in the searching array:
-                - "high", "low", "mid" is pointing a same index
-            That means the last comparing steps is actually comparing "low" value and the target (because "mid" value is same with "low" value).
-            If the target value is bigger than "low" value, the while statement excuted once more because "low" becomes same with "high".
-            Else(=that means the target value is smaller than "low"), "high" becomes smaller than "low"(because of mid-1) and while statement terminates. The index where the target would be is where "low" value is (because it's smaller than "low"), so, return "low".
+        While loop terminates(low>high) when the last step was the below case:
+            1. low and high was pointing the same value = searching area has one value only
+            (because each step of the loop, either low and high increase 1 only)
+            2. mid was also pointing the same value because high+low//2 = mid = 2high//2
+            3. target is bigger than mid because low increases in this case only
+            4. low becomes low+1 and it means it's same with mid+1=high+1
+            5. It's bigger than high, breaks the loop
+        idx should be mid+1 following 3 - which is same with the current low. So retrun low
         """
         low, high = 0, len(nums)-1
         while low <= high:
