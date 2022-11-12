@@ -5,7 +5,7 @@ class Solution:
         1. idx, cnt = 0
         2. if value = 0: cnt+1
         3. if value is not 0, change idx to idx-cnt
-        4. if idx + cnt == len(nums)-1: break
+        4. if idx == len(nums)-1: break
         """
         idx, cnt = 0, 0
         while idx < len(nums):
