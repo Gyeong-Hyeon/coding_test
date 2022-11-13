@@ -23,12 +23,12 @@ class Solution:
             5. After rotation, append t once more because there's no traiiling spaces in s
             6. join the values of list with space
         """
-        ans, start = '', 0
-        for i in range(len(s)):
-            if s[i] != ' ':
+        t, ans = '', []
+        for st in s:
+            if st != ' ':
+                t=st+t
                 continue
-            ans+=s[start:i][::-1]
-            ans+=' '
-            start=i+1
-        ans+=s[start:len(s)][::-1]
-        return ans
+            ans.append(t)
+            t = ''
+        ans.append(t)
+        return ' '.join(ans)
