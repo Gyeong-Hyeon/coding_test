@@ -12,7 +12,8 @@ class Solution:
             for i in range(len(nums)):
                 if nums[i] == 0:
                     cnt+=1
-                else:
+                    continue
+                if count > 0:
                     nums[i-cnt], nums[i] = nums[i], nums[i-cnt]
         2) Another Two pointers
             1. set the point for first zero of the array (initial value is 0)
