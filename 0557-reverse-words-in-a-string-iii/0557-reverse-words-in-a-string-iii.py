@@ -8,20 +8,27 @@ class Solution:
             4. After rotation, join the values of list with space
             Full code = return ' '.join([x[::-1] for x in s.split()])
         2) Two pointers
-            1. set t='', ans=[]
+            1. set ans = '', start = 0
+            2. Rotate s by index i
+            3. If s[i] == ' ':
+                ans+=s[start:i][::-1]
+                ans+=' '
+                start = i+1
+            4. After rotation, add s[start:last idx][::-1] to ans once more because there's no traiiling spaces
+        3) Use list
+            1. set t='', ans = []
             2. Rotate the string
             3. If value == ' ', ans.append[t], t='' 
             4. Else, value+t
-            5. After rotation, append t once more in case there wasn't whiespace at the end of "s"
+            5. After rotation, append t once more because there's no traiiling spaces in s
             6. join the values of list with space
         """
-        t, ans = '', []
-        for st in s:
-            if st == ' ':
-                ans.append(t)
-                t = ''
+        ans, start = '', 0
+        for i in range(len(s)):
+            if s[i] != ' ':
                 continue
-            t=st+t
-        if t:
-            ans.append(t)
-        return ' '.join(ans)
+            ans+=s[start:i][::-1]
+            ans+=' '
+            start=i+1
+        ans+=s[start:len(s)][::-1]
+        return ans
