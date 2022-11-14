@@ -5,14 +5,13 @@
 #         self.next = next
 class Solution:
     def middleNode(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        n = head
-        cnt = 0
-        while n.next:
-            n=n.next
+        """
+        find the length of linked list by pointer
+        """
+        p, cnt = head, 0
+        while p.next:
+            p = p.next
             cnt+=1
-        cnt = round((cnt/2)+0.1)
-        for i in range(cnt+1):
-            if i == cnt:
-                return head
+        for _ in range(round((cnt/2)+0.1)):
             head = head.next
-        
+        return head        
