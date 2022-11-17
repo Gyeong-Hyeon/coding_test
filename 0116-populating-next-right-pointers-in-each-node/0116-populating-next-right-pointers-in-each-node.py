@@ -11,7 +11,7 @@ class Node:
 class Solution:
     def connect(self, root: 'Optional[Node]') -> 'Optional[Node]':
         """
-        1. visit list = [root.left, root.right], prev_node = False
+        1. visit list = [root], prev_node = False
         2. for _ in visit list's length:
             if not prev_node:
                 prev_node = visit list.pop(0)
