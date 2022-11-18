@@ -1,64 +1,47 @@
 class Solution:
     def orangesRotting(self, grid: List[List[int]]) -> int:
-        # number of rows
-        rows = len(grid)
-        if rows == 0:  # check if grid is empty
+        """
+        1. Find the cells with value of 2 and insert the cell's position into a queue.
+        2. If any of the cells connected 4 directionally with the cells with value of 1's value is 1, change it's value to 2, cnt+1 and insert it's position into a queue.
+            - Since oranges becomes rotten simultaneously, all cells in 4 direction corresponding to the above case are grouped together and put into a queue.
+        3. count starts from -1 to return -1 if there was fresh orange but never rotten.
+        """
+        if not grid:
+            return -1
+        q = []
+        is_one = 0
+        #find where 2 is
+        for r in range(len(grid)):
+            for c in range(len(grid[0])):
+                if grid[r][c] == 0:
+                    continue
+                if grid[r][c] == 2:
+                    q.append((r,c))
+                else:
+                    is_one+=1
+        if not is_one:
+            return 0
+        if not q:
             return -1
         
-        # number of columns
-        cols = len(grid[0])
-        
-        # keep track of fresh oranges
-        fresh_cnt = 0
-        
-        # queue with rotten oranges (for BFS)
-        rotten = deque()
-        
-        # visit each cell in the grid
-        for r in range(rows):
-            for c in range(cols):
-                if grid[r][c] == 2:
-                    # add the rotten orange coordinates to the queue
-                    rotten.append((r, c))
-                elif grid[r][c] == 1:
-                    # update fresh oranges count
-                    fresh_cnt += 1
-        
-        # keep track of minutes passed.
-        minutes_passed = 0
-        
-        # If there are rotten oranges in the queue and there are still fresh oranges in the grid keep looping
-        while rotten and fresh_cnt > 0:
-
-            # update the number of minutes passed
-            # it is safe to update the minutes by 1, since we visit oranges level by level in BFS traversal.
-            minutes_passed += 1
-            
-            # process rotten oranges on the current level
-            for _ in range(len(rotten)):
-                x, y = rotten.popleft()
-                
-                # visit all the adjacent cells
-                for dx, dy in [(1,0), (-1,0), (0,1), (0,-1)]:
-                    # calculate the coordinates of the adjacent cell
-                    xx, yy = x + dx, y + dy
-                    # ignore the cell if it is out of the grid boundary
-                    if xx < 0 or xx == rows or yy < 0 or yy == cols:
+        is_rot=False
+        sec=0
+        DIR = [-1, 0, 1, 0, -1]
+        while q:
+            if is_rot:
+                sec+=1
+                is_rot=False
+            for _ in range(len(q)):
+                r, c = q.pop(0)
+                for i in range(4):
+                    fr, fc = r+DIR[i], c+DIR[i+1]
+                    if fr < 0 or fc < 0 or fr == len(grid) or fc == len(grid[0]) or grid[fr][fc] != 1:
                         continue
-                    # ignore the cell if it is empty '0' or visited before '2'
-                    if grid[xx][yy] == 0 or grid[xx][yy] == 2:
-                        continue
-                        
-                    # update the fresh oranges count
-                    fresh_cnt -= 1
-                    
-                    # mark the current fresh orange as rotten
-                    grid[xx][yy] = 2
-                    
-                    # add the current rotten to the queue
-                    rotten.append((xx, yy))
-
-        
-        # return the number of minutes taken to make all the fresh oranges to be rotten
-        # return -1 if there are fresh oranges left in the grid (there were no adjacent rotten oranges to make them rotten)
-        return minutes_passed if fresh_cnt == 0 else -1
+                    grid[fr][fc] = 2
+                    q.append((fr,fc))
+                    is_one-=1
+                    is_rot=True
+        if not is_one:
+            return sec
+        else:
+            return -1             
