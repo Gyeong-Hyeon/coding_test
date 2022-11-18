@@ -2,9 +2,13 @@ class Solution:
     def orangesRotting(self, grid: List[List[int]]) -> int:
         """
         1. Find the cells with value of 2 and insert the cell's position into a queue.
-        2. If any of the cells connected 4 directionally with the cells with value of 1's value is 1, change it's value to 2, cnt+1 and insert it's position into a queue.
-            - Since oranges becomes rotten simultaneously, all cells in 4 direction corresponding to the above case are grouped together and put into a queue.
-        3. count starts from -1 to return -1 if there was fresh orange but never rotten.
+        2. Count the number of cells with value of 1
+        3-1. If there is no cells with value of 1, return 0
+        3-2. If there is cells with value of 1 but no cells with value of 2, return -1
+        4. Take one by one from queue and check if there is any 4 directionally adjacent cells with value of 1
+            - If yes, change's value to 2, put the cell's position into the queue, and count it
+            - Once the first group's queue is empty, min+1            
+        3. If counts 4 and counts 2 is same, return 
         """
         if not grid:
             return -1
@@ -23,14 +27,11 @@ class Solution:
             return 0
         if not q:
             return -1
-        
-        is_rot=False
+
         sec=0
         DIR = [-1, 0, 1, 0, -1]
         while q:
-            if is_rot:
-                sec+=1
-                is_rot=False
+            sec+=1
             for _ in range(len(q)):
                 r, c = q.pop(0)
                 for i in range(4):
@@ -40,8 +41,7 @@ class Solution:
                     grid[fr][fc] = 2
                     q.append((fr,fc))
                     is_one-=1
-                    is_rot=True
         if not is_one:
-            return sec
+            return sec-1
         else:
             return -1             
