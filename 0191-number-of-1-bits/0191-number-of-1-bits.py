@@ -8,4 +8,8 @@ class Solution:
         2. Use python function
             n.bit_count()
         """
-        return n.bit_count()
+        cnt=0
+        while n:
+            n=n&n-1
+            cnt+=1
+        return cnt
