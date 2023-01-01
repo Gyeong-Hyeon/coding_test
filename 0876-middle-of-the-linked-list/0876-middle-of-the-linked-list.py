@@ -6,12 +6,13 @@
 class Solution:
     def middleNode(self, head: Optional[ListNode]) -> Optional[ListNode]:
         """
-        find the length of linked list by pointer
+        Solution 1. find the length of linked list -> return the middle node 
+        Solution 2.
+         - Move one pointer 2 nodes, the other pointer one node per loop
+         - Once the faster pointer reaches the end of the linked list, break the loop
+         - Return the node where the slower pointer is pointing
         """
-        p, cnt = head, 0
-        while p.next:
-            p = p.next
-            cnt+=1
-        for _ in range(round((cnt/2)+0.1)):
-            head = head.next
-        return head        
+        fast = slow = head
+        while fast and fast.next:
+            fast, slow = fast.next.next, slow.next
+        return slow
