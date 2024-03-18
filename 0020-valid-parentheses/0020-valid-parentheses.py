@@ -5,13 +5,9 @@ class Solution:
         st = []
         ht = {')':'(', '}':'{',']':'['}
         for c in s:
-            if c in ['(','{','[']:
+            if c in ht.values():
                 st.append(c)
                 continue
-            if len(st) == 0:
+            if len(st) == 0 or st.pop() != ht[c]:
                 return False
-            if not st.pop() == ht[c]:
-                return False
-        if len(st) > 0:
-            return False
-        return True
+        return not st
