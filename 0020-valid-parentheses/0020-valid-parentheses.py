@@ -3,7 +3,7 @@ class Solution:
         st = []
         ht = {')':'(', '}':'{',']':'['}
         for c in s:
-            if c in ht.values():
+            if c in '({[':
                 st.append(c)
                 continue
             if len(st) == 0 or st.pop() != ht[c]:
