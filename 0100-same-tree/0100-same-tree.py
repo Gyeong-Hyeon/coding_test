@@ -6,7 +6,7 @@
 #         self.right = right
 class Solution:
     def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
-        to_visit, p_node, q_node = [(p,q)], p, q
+        to_visit = [(p,q)]
         while to_visit:
             p_node, q_node = to_visit.pop()
             if not p_node and not q_node:
