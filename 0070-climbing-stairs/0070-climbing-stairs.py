@@ -1,12 +1,13 @@
 class Solution:
     def climbStairs(self, n: int) -> int:
         """
-        Combination(n) = Combination(n-1) + Combination(n-2)        
+        a=0 ~ 2a == n
+        Sigma (n-a)!/a!(n-2a)!
         """
-        comb = [0,1,2,3,5,8,13]
-        if n < len(comb):
-            return comb[n]
-        else:
-            while len(comb)-1 < n:
-                comb.append(comb[-2] + comb[-1])
-            return comb[-1]
+        def factorial(num):
+            return num * factorial(num-1) if num > 1 else 1
+
+        i, ans = 0, 0
+        for i in range((n//2)+1):
+            ans+=factorial(n-i)/(factorial(i)*factorial(n-(2*i)))
+        return int(ans)
