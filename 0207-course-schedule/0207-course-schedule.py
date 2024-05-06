@@ -6,10 +6,6 @@ class Solution:
                 return False
 
             nodes = schedule.get(s, [])[:]
-            if not nodes:
-                schedule[f] = schedule.get(f,[]) + [s]
-                continue
-
             while nodes:
                 node = nodes.pop(0)
                 if f == node:
