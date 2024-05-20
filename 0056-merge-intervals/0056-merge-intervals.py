@@ -8,8 +8,6 @@ class Solution:
                 ans.append([pre_start, pre_end])
                 pre_start, pre_end = start, end
                 continue
-            if start < pre_start:
-                pre_start = start
             if end > pre_end:
                 pre_end = end
         ans.append([pre_start, pre_end])
