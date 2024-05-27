@@ -1,8 +1,6 @@
 class Solution:
     def missingNumber(self, nums: List[int]) -> int:
-        end = len(nums)
-        cnts = [False]*(len(nums)+1)
-        
+        cnts = [False]*(len(nums)+1)        
         for num in nums:
             cnts[num] = True
         
