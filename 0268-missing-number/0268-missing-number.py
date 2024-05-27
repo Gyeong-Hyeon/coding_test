@@ -1,5 +1,6 @@
 class Solution:
     def missingNumber(self, nums: List[int]) -> int:
-        target = len(nums)*(len(nums)+1)/2
-        input_sum = sum(nums)
-        return int(target-input_sum)
+        target = len(nums)
+        for i, num in enumerate(nums):
+            target ^= i^num
+        return target
