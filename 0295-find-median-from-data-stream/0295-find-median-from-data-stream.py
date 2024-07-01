@@ -3,12 +3,13 @@ class MedianFinder:
         self.num_list = []
         
     def addNum(self, num: int) -> None:
-        if self.num_list and num <= self.num_list[0]:
-            self.num_list.insert(0,num)
+        if not self.num_list or num >= self.num_list[-1]:
+            self.num_list.append(num)
             return
-        self.num_list.append(num)
-        if len(self.num_list) > 1 and num < self.num_list[-2]:
-            self.num_list.sort()
+        s=0
+        while self.num_list[s] < num:
+            s+=1
+        self.num_list.insert(s, num)
 
     def findMedian(self) -> float:
         l = len(self.num_list)
