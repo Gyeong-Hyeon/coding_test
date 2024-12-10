@@ -1,12 +1,17 @@
 class Solution:
     def maxOperations(self, nums: List[int], k: int) -> int:
-        to_find, cnt = {}, 0
+        nums.sort()
+        l, r, cnt = 0, len(nums)-1, 0
         
-        for i, num in enumerate(nums):
-            if found := to_find.get(num):
-                cnt+=1
-                found.pop()
+        while l < r:
+            target = nums[l]+nums[r]
+            if target < k:
+                l+=1
                 continue
-            target = k-num
-            to_find[target] = to_find.get(target,[]) + [i]
+            if target > k:
+                r-=1
+                continue
+            cnt+=1
+            l+=1
+            r-=1
         return cnt
