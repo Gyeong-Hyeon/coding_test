@@ -7,9 +7,11 @@
 ## Array
 |  |
 | ------- |
+| [1319-unique-number-of-occurrences](https://github.com/Gyeong-Hyeon/coding_test/tree/master/1319-unique-number-of-occurrences) |
 | [1392-find-the-difference-of-two-arrays](https://github.com/Gyeong-Hyeon/coding_test/tree/master/1392-find-the-difference-of-two-arrays) |
 ## Hash Table
 |  |
 | ------- |
+| [1319-unique-number-of-occurrences](https://github.com/Gyeong-Hyeon/coding_test/tree/master/1319-unique-number-of-occurrences) |
 | [1392-find-the-difference-of-two-arrays](https://github.com/Gyeong-Hyeon/coding_test/tree/master/1392-find-the-difference-of-two-arrays) |
 <!---LeetCode Topics End-->
