@@ -20,6 +20,7 @@
 ## String
 |  |
 | ------- |
+| [0394-decode-string](https://github.com/Gyeong-Hyeon/coding_test/tree/master/0394-decode-string) |
 | [1777-determine-if-two-strings-are-close](https://github.com/Gyeong-Hyeon/coding_test/tree/master/1777-determine-if-two-strings-are-close) |
 | [2470-removing-stars-from-a-string](https://github.com/Gyeong-Hyeon/coding_test/tree/master/2470-removing-stars-from-a-string) |
 ## Sorting
@@ -42,6 +43,7 @@
 ## Stack
 |  |
 | ------- |
+| [0394-decode-string](https://github.com/Gyeong-Hyeon/coding_test/tree/master/0394-decode-string) |
 | [2470-removing-stars-from-a-string](https://github.com/Gyeong-Hyeon/coding_test/tree/master/2470-removing-stars-from-a-string) |
 ## Design
 |  |
@@ -55,4 +57,8 @@
 |  |
 | ------- |
 | [0969-number-of-recent-calls](https://github.com/Gyeong-Hyeon/coding_test/tree/master/0969-number-of-recent-calls) |
+## Recursion
+|  |
+| ------- |
+| [0394-decode-string](https://github.com/Gyeong-Hyeon/coding_test/tree/master/0394-decode-string) |
 <!---LeetCode Topics End-->
