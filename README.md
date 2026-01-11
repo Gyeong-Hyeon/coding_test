@@ -20,6 +20,7 @@
 ## String
 |  |
 | ------- |
+| [0022-generate-parentheses](https://github.com/Gyeong-Hyeon/coding_test/tree/master/0022-generate-parentheses) |
 | [0394-decode-string](https://github.com/Gyeong-Hyeon/coding_test/tree/master/0394-decode-string) |
 | [1777-determine-if-two-strings-are-close](https://github.com/Gyeong-Hyeon/coding_test/tree/master/1777-determine-if-two-strings-are-close) |
 | [2470-removing-stars-from-a-string](https://github.com/Gyeong-Hyeon/coding_test/tree/master/2470-removing-stars-from-a-string) |
@@ -69,4 +70,12 @@
 |  |
 | ------- |
 | [2216-delete-the-middle-node-of-a-linked-list](https://github.com/Gyeong-Hyeon/coding_test/tree/master/2216-delete-the-middle-node-of-a-linked-list) |
+## Dynamic Programming
+|  |
+| ------- |
+| [0022-generate-parentheses](https://github.com/Gyeong-Hyeon/coding_test/tree/master/0022-generate-parentheses) |
+## Backtracking
+|  |
+| ------- |
+| [0022-generate-parentheses](https://github.com/Gyeong-Hyeon/coding_test/tree/master/0022-generate-parentheses) |
 <!---LeetCode Topics End-->
