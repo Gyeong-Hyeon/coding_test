@@ -13,6 +13,7 @@
 ## Hash Table
 |  |
 | ------- |
+| [0387-first-unique-character-in-a-string](https://github.com/Gyeong-Hyeon/coding_test/tree/master/0387-first-unique-character-in-a-string) |
 | [1319-unique-number-of-occurrences](https://github.com/Gyeong-Hyeon/coding_test/tree/master/1319-unique-number-of-occurrences) |
 | [1392-find-the-difference-of-two-arrays](https://github.com/Gyeong-Hyeon/coding_test/tree/master/1392-find-the-difference-of-two-arrays) |
 | [1777-determine-if-two-strings-are-close](https://github.com/Gyeong-Hyeon/coding_test/tree/master/1777-determine-if-two-strings-are-close) |
@@ -21,6 +22,7 @@
 |  |
 | ------- |
 | [0022-generate-parentheses](https://github.com/Gyeong-Hyeon/coding_test/tree/master/0022-generate-parentheses) |
+| [0387-first-unique-character-in-a-string](https://github.com/Gyeong-Hyeon/coding_test/tree/master/0387-first-unique-character-in-a-string) |
 | [0394-decode-string](https://github.com/Gyeong-Hyeon/coding_test/tree/master/0394-decode-string) |
 | [1777-determine-if-two-strings-are-close](https://github.com/Gyeong-Hyeon/coding_test/tree/master/1777-determine-if-two-strings-are-close) |
 | [2470-removing-stars-from-a-string](https://github.com/Gyeong-Hyeon/coding_test/tree/master/2470-removing-stars-from-a-string) |
@@ -31,6 +33,7 @@
 ## Counting
 |  |
 | ------- |
+| [0387-first-unique-character-in-a-string](https://github.com/Gyeong-Hyeon/coding_test/tree/master/0387-first-unique-character-in-a-string) |
 | [1777-determine-if-two-strings-are-close](https://github.com/Gyeong-Hyeon/coding_test/tree/master/1777-determine-if-two-strings-are-close) |
 ## Matrix
 |  |
@@ -53,6 +56,7 @@
 ## Queue
 |  |
 | ------- |
+| [0387-first-unique-character-in-a-string](https://github.com/Gyeong-Hyeon/coding_test/tree/master/0387-first-unique-character-in-a-string) |
 | [0969-number-of-recent-calls](https://github.com/Gyeong-Hyeon/coding_test/tree/master/0969-number-of-recent-calls) |
 ## Data Stream
 |  |
