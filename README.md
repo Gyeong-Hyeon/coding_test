@@ -18,6 +18,7 @@
 | [1392-find-the-difference-of-two-arrays](https://github.com/Gyeong-Hyeon/coding_test/tree/master/1392-find-the-difference-of-two-arrays) |
 | [1777-determine-if-two-strings-are-close](https://github.com/Gyeong-Hyeon/coding_test/tree/master/1777-determine-if-two-strings-are-close) |
 | [2428-equal-row-and-column-pairs](https://github.com/Gyeong-Hyeon/coding_test/tree/master/2428-equal-row-and-column-pairs) |
+| [2620-find-consecutive-integers-from-a-data-stream](https://github.com/Gyeong-Hyeon/coding_test/tree/master/2620-find-consecutive-integers-from-a-data-stream) |
 ## String
 |  |
 | ------- |
@@ -35,6 +36,7 @@
 | ------- |
 | [0387-first-unique-character-in-a-string](https://github.com/Gyeong-Hyeon/coding_test/tree/master/0387-first-unique-character-in-a-string) |
 | [1777-determine-if-two-strings-are-close](https://github.com/Gyeong-Hyeon/coding_test/tree/master/1777-determine-if-two-strings-are-close) |
+| [2620-find-consecutive-integers-from-a-data-stream](https://github.com/Gyeong-Hyeon/coding_test/tree/master/2620-find-consecutive-integers-from-a-data-stream) |
 ## Matrix
 |  |
 | ------- |
@@ -53,15 +55,18 @@
 |  |
 | ------- |
 | [0969-number-of-recent-calls](https://github.com/Gyeong-Hyeon/coding_test/tree/master/0969-number-of-recent-calls) |
+| [2620-find-consecutive-integers-from-a-data-stream](https://github.com/Gyeong-Hyeon/coding_test/tree/master/2620-find-consecutive-integers-from-a-data-stream) |
 ## Queue
 |  |
 | ------- |
 | [0387-first-unique-character-in-a-string](https://github.com/Gyeong-Hyeon/coding_test/tree/master/0387-first-unique-character-in-a-string) |
 | [0969-number-of-recent-calls](https://github.com/Gyeong-Hyeon/coding_test/tree/master/0969-number-of-recent-calls) |
+| [2620-find-consecutive-integers-from-a-data-stream](https://github.com/Gyeong-Hyeon/coding_test/tree/master/2620-find-consecutive-integers-from-a-data-stream) |
 ## Data Stream
 |  |
 | ------- |
 | [0969-number-of-recent-calls](https://github.com/Gyeong-Hyeon/coding_test/tree/master/0969-number-of-recent-calls) |
+| [2620-find-consecutive-integers-from-a-data-stream](https://github.com/Gyeong-Hyeon/coding_test/tree/master/2620-find-consecutive-integers-from-a-data-stream) |
 ## Recursion
 |  |
 | ------- |
