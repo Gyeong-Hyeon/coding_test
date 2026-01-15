@@ -13,12 +13,15 @@ class Solution:
             3. ë°ë³µë¬¸ ë´ìì x%10ì ansì ì¶ê°
             4. return int(is_negative+ans)
         """
-        # ì´í°ë ì´í° ì¬ì©
+        # ì«ìë¡ í´ê²°
         if 2**63 < x or -2**63 > x: return 0
-        is_negative = ''
+        is_negative, ans = '', ''
         if x < 0:
             is_negative = '-'
             x*=-1
-        ans = str(x)[::-1]
+        while x//10 > 0:
+            x, remainder = divmod(x, 10)
+            ans+=str(remainder)
+        ans+=str(x)
         if int(ans) > 2**31: return 0
         return int(is_negative+ans)
