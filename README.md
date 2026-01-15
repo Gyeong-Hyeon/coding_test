@@ -87,4 +87,8 @@
 |  |
 | ------- |
 | [0022-generate-parentheses](https://github.com/Gyeong-Hyeon/coding_test/tree/master/0022-generate-parentheses) |
+## Math
+|  |
+| ------- |
+| [0007-reverse-integer](https://github.com/Gyeong-Hyeon/coding_test/tree/master/0007-reverse-integer) |
 <!---LeetCode Topics End-->
