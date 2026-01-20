@@ -7,6 +7,7 @@
 ## Array
 |  |
 | ------- |
+| [0027-remove-element](https://github.com/Gyeong-Hyeon/coding_test/tree/master/0027-remove-element) |
 | [0088-merge-sorted-array](https://github.com/Gyeong-Hyeon/coding_test/tree/master/0088-merge-sorted-array) |
 | [1319-unique-number-of-occurrences](https://github.com/Gyeong-Hyeon/coding_test/tree/master/1319-unique-number-of-occurrences) |
 | [1392-find-the-difference-of-two-arrays](https://github.com/Gyeong-Hyeon/coding_test/tree/master/1392-find-the-difference-of-two-arrays) |
@@ -80,6 +81,7 @@
 ## Two Pointers
 |  |
 | ------- |
+| [0027-remove-element](https://github.com/Gyeong-Hyeon/coding_test/tree/master/0027-remove-element) |
 | [0088-merge-sorted-array](https://github.com/Gyeong-Hyeon/coding_test/tree/master/0088-merge-sorted-array) |
 | [2216-delete-the-middle-node-of-a-linked-list](https://github.com/Gyeong-Hyeon/coding_test/tree/master/2216-delete-the-middle-node-of-a-linked-list) |
 ## Dynamic Programming
