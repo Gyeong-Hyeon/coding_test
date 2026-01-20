@@ -7,6 +7,7 @@
 ## Array
 |  |
 | ------- |
+| [0088-merge-sorted-array](https://github.com/Gyeong-Hyeon/coding_test/tree/master/0088-merge-sorted-array) |
 | [1319-unique-number-of-occurrences](https://github.com/Gyeong-Hyeon/coding_test/tree/master/1319-unique-number-of-occurrences) |
 | [1392-find-the-difference-of-two-arrays](https://github.com/Gyeong-Hyeon/coding_test/tree/master/1392-find-the-difference-of-two-arrays) |
 | [2428-equal-row-and-column-pairs](https://github.com/Gyeong-Hyeon/coding_test/tree/master/2428-equal-row-and-column-pairs) |
@@ -30,6 +31,7 @@
 ## Sorting
 |  |
 | ------- |
+| [0088-merge-sorted-array](https://github.com/Gyeong-Hyeon/coding_test/tree/master/0088-merge-sorted-array) |
 | [1777-determine-if-two-strings-are-close](https://github.com/Gyeong-Hyeon/coding_test/tree/master/1777-determine-if-two-strings-are-close) |
 ## Counting
 |  |
@@ -78,6 +80,7 @@
 ## Two Pointers
 |  |
 | ------- |
+| [0088-merge-sorted-array](https://github.com/Gyeong-Hyeon/coding_test/tree/master/0088-merge-sorted-array) |
 | [2216-delete-the-middle-node-of-a-linked-list](https://github.com/Gyeong-Hyeon/coding_test/tree/master/2216-delete-the-middle-node-of-a-linked-list) |
 ## Dynamic Programming
 |  |
